@@ -1,0 +1,206 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ILLEGAL_INSTRUCTION (0xc000001d) at pc=0x000000006b869ef3, pid=11568, tid=12120
+#
+# JRE version:  (8.0_40-b26) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.40-b25 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [java.dll+0x9ef3]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000001f4f000):  JavaThread "main" [_thread_in_native, id=12120, stack(0x00000000022a0000,0x00000000023a0000)]
+
+siginfo: ExceptionCode=0xc000001d
+
+Registers:
+RAX=0x0000000000000000, RBX=0x000000001c2d1cd0, RCX=0x0000000000000000, RDX=0x0000000000000000
+RSP=0x000000000239bf40, RBP=0x0000000001e1dd30, RSI=0x0000000000000000, RDI=0x0000000001e3c330
+R8 =0x000000000239bdd8, R9 =0x0000000001e1dd30, R10=0x0000000000000000, R11=0x0000000000000246
+R12=0x0000000001e1dd30, R13=0x0000000000000761, R14=0x0000000000000000, R15=0x0000000000000001
+RIP=0x000000006b869ef3, EFLAGS=0x0000000000010206
+
+Top of Stack: (sp=0x000000000239bf40)
+0x000000000239bf40:   000000001c2d1cd0 0000000000000000
+0x000000000239bf50:   0000000000000000 0000000001e3c330
+0x000000000239bf60:   0800000a04034b50 15e846676f260000
+0x000000000239bf70:   076100000761dc77 00000000001a0000
+0x000000000239bf80:   0000e1539712be2f 0000000001e1dd10
+0x000000000239bf90:   0000000000000761 000000006b849ff7
+0x000000000239bfa0:   0000000001e37450 000000006b84a31b
+0x000000000239bfb0:   000000001c2d1cd0 0000000000000104
+0x000000000239bfc0:   000000001c2d1cd0 000000006b84a4d8
+0x000000000239bfd0:   0000000001e3c330 000000000239c180
+0x000000000239bfe0:   0000000000000000 0000000001e323a0
+0x000000000239bff0:   0000000000000761 000000006f61ac1b
+0x000000000239c000:   0000000000000000 0000000000000000
+0x000000000239c010:   0000000001e323a0 000000000239c060
+0x000000000239c020:   0000000001e3c330 000000006f58ec7f
+0x000000000239c030:   0000000001f4f000 0000000001e3c330 
+
+Instructions: (pc=0x000000006b869ef3)
+0x000000006b869ed3:   24 08 48 89 74 24 10 57 48 83 ec 20 49 8b d0 4c
+0x000000006b869ee3:   8b 05 97 b6 01 00 41 8b d9 e8 ff 2c 00 00 48 8b
+0x000000006b869ef3:   f0 48 85 c0 75 04 32 c0 eb 3e 48 8b c8 ff 15 aa
+0x000000006b869f03:   02 01 00 48 8b ce 8b d0 e8 20 fa ff ff 48 8b ce 
+
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x000000001c2d1cd0 is an unknown value
+RCX=0x0000000000000000 is an unknown value
+RDX=0x0000000000000000 is an unknown value
+RSP=0x000000000239bf40 is pointing into the stack for thread: 0x0000000001f4f000
+RBP=0x0000000001e1dd30 is an unknown value
+RSI=0x0000000000000000 is an unknown value
+RDI=0x0000000001e3c330 is an unknown value
+R8 =0x000000000239bdd8 is pointing into the stack for thread: 0x0000000001f4f000
+R9 =0x0000000001e1dd30 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000246 is an unknown value
+R12=0x0000000001e1dd30 is an unknown value
+R13=0x0000000000000761 is an unknown value
+R14=0x0000000000000000 is an unknown value
+R15=0x0000000000000001 is an unknown value
+
+
+Stack: [0x00000000022a0000,0x00000000023a0000],  sp=0x000000000239bf40,  free space=1007k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [java.dll+0x9ef3]
+C  0x15e846676f260000
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.lang.ClassLoader.<clinit>()V+10
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;)Ljava/lang/Object;+0
+j  java.lang.reflect.AccessibleObject.<clinit>()V+19
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x0000000001f4f000 JavaThread "main" [_thread_in_native, id=12120, stack(0x00000000022a0000,0x00000000023a0000)]
+
+Other Threads:
+  0x000000001d343000 VMThread [stack: 0x000000001e350000,0x000000001e450000] [id=12244]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 76288K, used 1310K [0x000000076ad00000, 0x0000000770200000, 0x00000007c0000000)
+  eden space 65536K, 2% used [0x000000076ad00000,0x000000076ae47af0,0x000000076ed00000)
+  from space 10752K, 0% used [0x000000076f780000,0x000000076f780000,0x0000000770200000)
+  to   space 10752K, 0% used [0x000000076ed00000,0x000000076ed00000,0x000000076f780000)
+ ParOldGen       total 175104K, used 0K [0x00000006c0600000, 0x00000006cb100000, 0x000000076ad00000)
+  object space 175104K, 0% used [0x00000006c0600000,0x00000006c0600000,0x00000006cb100000)
+ Metaspace       used 845K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 85K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011a30000,0x0000000012230000] byte_map_base: 0x000000000e42d000
+
+Marking Bits: (ParMarkBitMap*) 0x000000006fd34040
+ Begin Bits: [0x0000000013230000, 0x0000000017218000)
+ End Bits:   [0x0000000017218000, 0x000000001b200000)
+
+Polling page: 0x0000000000330000
+
+CodeCache: size=245760Kb used=395Kb max_used=395Kb free=245364Kb
+ bounds [0x0000000002670000, 0x00000000028e0000, 0x0000000011670000]
+ total_blobs=86 nmethods=0 adapters=60
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.026 loading class java/lang/reflect/ReflectPermission done
+Event: 0.026 loading class sun/reflect/ReflectionFactory$GetReflectionFactoryAction
+Event: 0.026 loading class java/security/PrivilegedAction
+Event: 0.026 loading class java/security/PrivilegedAction done
+Event: 0.026 loading class sun/reflect/ReflectionFactory$GetReflectionFactoryAction done
+Event: 0.026 loading class java/security/cert/Certificate
+Event: 0.026 loading class java/security/cert/Certificate done
+Event: 0.026 loading class java/util/Vector
+Event: 0.026 loading class java/util/List
+Event: 0.026 loading class java/util/Collection
+
+
+Dynamic libraries:
+0x000000013ff90000 - 0x000000013ffc7000 	B:\Program Files\bin\java.exe
+0x0000000077b20000 - 0x0000000077cca000 	C:\Windows\SYSTEM32\ntdll.dll
+0x000007fed4eb0000 - 0x000007fed4ee4000 	C:\Program Files\AVAST Software\Avast\x64\aswhooka.dll
+0x0000000077a00000 - 0x0000000077b1f000 	C:\Windows\system32\kernel32.dll
+0x000007fefdb00000 - 0x000007fefdb6a000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefe9a0000 - 0x000007fefea7b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007feffd40000 - 0x000007feffddf000 	C:\Windows\system32\msvcrt.dll
+0x000007feffc90000 - 0x000007feffcaf000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007feff9c0000 - 0x000007feffaed000 	C:\Windows\system32\RPCRT4.dll
+0x0000000077900000 - 0x00000000779fa000 	C:\Windows\system32\USER32.dll
+0x000007feffb50000 - 0x000007feffbb7000 	C:\Windows\system32\GDI32.dll
+0x000007fefea80000 - 0x000007fefea8e000 	C:\Windows\system32\LPK.dll
+0x000007feffbc0000 - 0x000007feffc8a000 	C:\Windows\system32\USP10.dll
+0x000007fefbd40000 - 0x000007fefbf34000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18807_none_fa381d5f175bfb52\COMCTL32.dll
+0x000007feff730000 - 0x000007feff7a1000 	C:\Windows\system32\SHLWAPI.dll
+0x000007feff440000 - 0x000007feff46e000 	C:\Windows\system32\IMM32.DLL
+0x000007feff620000 - 0x000007feff729000 	C:\Windows\system32\MSCTF.dll
+0x0000000050090000 - 0x0000000050162000 	B:\Program Files\jre\bin\msvcr100.dll
+0x000000006f530000 - 0x000000006fdb3000 	B:\Program Files\jre\bin\server\jvm.dll
+0x000007fef6780000 - 0x000007fef6789000 	C:\Windows\system32\WSOCK32.dll
+0x000007feffde0000 - 0x000007feffe2d000 	C:\Windows\system32\WS2_32.dll
+0x000007feffd30000 - 0x000007feffd38000 	C:\Windows\system32\NSI.dll
+0x000007fefb660000 - 0x000007fefb69b000 	C:\Windows\system32\WINMM.dll
+0x000007fefc8a0000 - 0x000007fefc8ac000 	C:\Windows\system32\VERSION.dll
+0x0000000077ce0000 - 0x0000000077ce7000 	C:\Windows\system32\PSAPI.DLL
+0x000000006b890000 - 0x000000006b89f000 	B:\Program Files\jre\bin\verify.dll
+0x000000006b860000 - 0x000000006b889000 	B:\Program Files\jre\bin\java.dll
+0x000000006b840000 - 0x000000006b856000 	B:\Program Files\jre\bin\zip.dll
+0x000007fef8f90000 - 0x000007fef90b5000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Djava.security.manager=worker.org.gradle.process.internal.worker.child.BootstrapSecurityManager -Dorg.gradle.native=false -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant -ea 
+java_command: worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 3'
+java_class_path (initial): C:\Users\Aaron\.gradle\caches\4.1\workerMain\gradle-worker.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Python36-32\Scripts\;C:\Program Files (x86)\Python36-32\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Java\jre7\bin\java.exe;C:\Program Files (x86)\Windows Live\Shared;C:\Windows\System32;C:\Python27;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\GtkSharp\2.12\bin;B:\py590\anaconda3;B:\py590\anaconda3\Scripts;B:\py590\anaconda3\Library\bin;C:\Users\Aaron\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\Aaron\AppData\Local\Programs\Python\Python35\;C:\Users\Aaron\AppData\Local\GitHubDesktop\bin;B:\py590\anaconda3;B:\py590\anaconda3\Scripts;B:\py590\anaconda3\Library\bin;C:\Users\Aaron\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\Aaron\AppData\Local\Programs\Python\Python35\;C:\Users\Aaron\AppData\Local\GitHubDesktop\bin
+USERNAME=Aaron
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.23677)
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 16745988k(7104816k free), swap 18466448k(4749752k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.40-b25) for windows-amd64 JRE (1.8.0_40-b26), built on Mar  7 2015 13:51:59 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Tue May 01 23:06:47 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
